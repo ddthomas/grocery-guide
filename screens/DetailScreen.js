@@ -9,8 +9,8 @@ class DetailScreen extends React.Component {
 
     render() {
         return (
-            <ScrollView>
-                <View style={styles.container}>
+            <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
+                <View style={{ ...styles.container, ...styles.homeScreen }}>
                     <Text>Detail Screen</Text>
                     <Button title="Go to Home" onPress={() => this.props.navigation.navigate("Home")} />
                 </View>
