@@ -1,5 +1,6 @@
 import React from "react";
-import { StyleSheet, Text, View, Button } from "react-native";
+import { StyleSheet, ScrollView, Text, View, Button } from "react-native";
+import styles from "../libs/styles";
 
 class DetailScreen extends React.Component {
     constructor(props) {
@@ -8,10 +9,12 @@ class DetailScreen extends React.Component {
 
     render() {
         return (
-            <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-                <Text>Detail Screen</Text>
-                <Button title="Go to Home" onPress={() => this.props.navigation.navigate("Home")} />
-            </View>
+            <ScrollView>
+                <View style={styles.container}>
+                    <Text>Detail Screen</Text>
+                    <Button title="Go to Home" onPress={() => this.props.navigation.navigate("Home")} />
+                </View>
+            </ScrollView>
         );
     }
 }

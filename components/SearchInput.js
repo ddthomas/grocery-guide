@@ -1,12 +1,21 @@
-import React from "react";
-import { View, Text } from "react-native";
+import React, { useState } from "react";
+import { View, Text, TextInput } from "react-native";
 
-export default class SearchInput extends React.Component {
-	render() {
-		return (
-			<View>
-				<Text> Hello World! </Text>
-			</View>
-		);
-	}
+export default function SearchInput(props) {
+	const [value, onChangeText] = React.useState("Search...");
+	return (
+		<View>
+			<TextInput
+				style={{
+					height: 40,
+					borderColor: "gray",
+					borderWidth: 1,
+				}}
+				{...props} // Inherit any props passed to it; e.g., multiline, numberOfLines below
+				editable
+				onChangeText={(text) => onChangeText(text)}
+				value={value}
+			/>
+		</View>
+	);
 }
