@@ -1,25 +1,23 @@
 import React from "react";
-import { SafeAreaView, StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 
 import HomeScreen from "./screens/HomeScreen";
-import DetailScreen from "./screens/DetailScreen";
-import CategoriesScreen from "./screens/CategoriesScreen";
+import CategoryScreen from "./screens/CategoryScreen";
+import EduContent from "./screens/EduContent";
 
 const Stack = createStackNavigator();
 
 function App() {
   return (
-    <SafeAreaView style={{ flex: 1 }}>
-      <NavigationContainer>
-        <Stack.Navigator>
-          <Stack.Screen name="Home" component={HomeScreen} />
-          <Stack.Screen name="Details" component={DetailScreen} />
-          <Stack.Screen name="Categories" component={CategoriesScreen} />
-        </Stack.Navigator>
-      </NavigationContainer>
-    </SafeAreaView>
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Grocery Guide" component={HomeScreen} />
+        <Stack.Screen name="Category" component={CategoryScreen} />
+        <Stack.Screen name="Edu" component={EduContent} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
 
