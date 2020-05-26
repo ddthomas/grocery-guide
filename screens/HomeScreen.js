@@ -7,18 +7,18 @@ import SearchInput from "../components/SearchInput";
 // Styles
 import styles from "../libs/styles";
 
-const homeScreenStyles = StyleSheet.create({
-	container: {
-		backgroundColor: "#fff",
-	},
-});
-const container = StyleSheet.compose(styles.container, homeScreenStyles.container);
+// const homeScreenStyles = StyleSheet.create({
+// 	container: {
+// 		backgroundColor: "#fff",
+// 	},
+// });
+// const container = StyleSheet.compose(styles.container, homeScreenStyles.container);
 
 function HomeScreen({ navigation }) {
 	return (
 		<ScrollView contentContainerStyle={{ flexGrow: 1 }}>
 			<SearchInput />
-			<View style={container}>
+			<View style={styles.container}>
 				<Text>Home Screen</Text>
 				<Button title="Detail Screen" onPress={() => navigation.navigate("Details")} />
 				<Button title="Categories Screen" onPress={() => navigation.navigate("Categories")} />
