@@ -1,6 +1,6 @@
 import React from "react";
 import { StyleSheet, Text, View, Button } from "react-native";
-import Search from '../components/Search';
+import Search from "../components/Search";
 
 class DetailScreen extends React.Component {
     constructor(props) {
@@ -11,7 +11,7 @@ class DetailScreen extends React.Component {
         return (
             <View>
                 <Search />
-                <View >
+                <View>
                     <Text></Text>
                     <Text>Questions / Items in this Grocercy Aisle</Text>
                     <Button title="My Question" onPress={() => this.props.navigation.navigate("Edu")} />
