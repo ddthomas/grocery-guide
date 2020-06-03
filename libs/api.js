@@ -1,13 +1,13 @@
-import questions from "../data/questions.json";
+import eduContent from "../data/eduContent.json";
 
 const DATA = {
-	questions: questions,
+	eduContent: eduContent
 };
 
 module.exports = (options) => {
 	return {
-		get({ keyStr }) {
-			return DATA[keyStr];
+		get({ key }) {
+			return DATA[key];
 		},
 	};
 };

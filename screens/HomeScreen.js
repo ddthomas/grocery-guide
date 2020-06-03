@@ -8,7 +8,7 @@ import API from "../libs/api";
 const api = API({});
 
 function HomeScreen({ navigation }) {
-	const questions = api.get({ keyStr: "questions" });
+	const questions = api.get({ key: "eduContent" });
 
 	return (
 		<View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
@@ -16,7 +16,6 @@ function HomeScreen({ navigation }) {
 			<Button title="Category" onPress={() => navigation.navigate("Category")} />
 
 			<Text>Top Questions:</Text>
-			<Button title="Question" onPress={() => navigation.navigate("Edu")} />
 
 			<Questions data={questions} />
 		</View>
