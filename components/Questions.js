@@ -4,12 +4,12 @@ import { useNavigation } from '@react-navigation/native';
 
 function Question({ _id, question }) {
 	const navigation = useNavigation();
-	return <Button title={question} onPress={() => navigation.navigate("Edu")} />;
+	return <Button title={question} onPress={() => navigation.navigate("Edu",{eduID: _id})} />;
 }
 
 export default function Questions({ data }) {
 	const questions = data;
-	return questions.map((question) => {
-		return <Question key={question._id} {...question} />;
+	return questions.map((eduContent) => {
+		return <Question key={eduContent._id} {...eduContent} />;
 	});
 }
