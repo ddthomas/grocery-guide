@@ -1,30 +1,29 @@
 [
     {
         "_id": 1,
-        "class": "grocery", 
+        "class": "grocery",
         "question": "Which oatmeal is the healthiest?",
-        "category": "Breakfast", 
+        "category": "Breakfast",
         "subcategory": "cereal",
         "tags": ["breakfast", "oatmeal", "oats", "steel cut", "rolled", "instant"],
         "text": "Typically the best oatmeal is steel cut because of its higher fiber content by virtue of being less processed."
     },
     {
         "_id": 2,
-        "class": "grocery", 
+        "class": "grocery",
         "question": "Should I drink skim milk?",
-        "category": "Dairy", 
+        "category": "Dairy",
         "subcategory": "milk",
         "tags": ["dairy", "milk", "low fat", "whole milk", "1% milk", "2% milk"],
         "text": "Yes, if you eat a lot of animal products then you should consider drinking skim milk. This is due to its lower saturated fat content."
     },
     {
         "_id": 3,
-        "class": "grocery", 
+        "class": "grocery",
         "question": "Are eggs bad for my cholesterol?",
-        "category": "Eggs", 
+        "category": "Eggs",
         "subcategory": "",
         "tags": ["eggs", "cholesterol"],
         "text": "Individuals with diabetes may be higher risk for raising cholesterol by consuming items like eggs. Eggs do contain cholesterol but for most people they won't raise the level of cholesterol circulating in the bloodstream. Cholesterol is needed in the body and is the precursor of the five major classes of steroid hormones: progestagens, glucocorticoids, mineralocorticoids, androgens, and estrogens. These hormones are powerful signal molecules that regulate a host of organismal functions."
     }
-
 ]

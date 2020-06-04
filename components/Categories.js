@@ -1,10 +1,19 @@
 import React from "react";
 import { Button } from "react-native";
-import { useNavigation } from '@react-navigation/native';
+import { useNavigation } from "@react-navigation/native";
 
 function Category({ _id, category }) {
 	const navigation = useNavigation();
-	return <Button title={category} onPress={() => navigation.navigate("Category")} />;
+	return (
+		<Button
+			title={category}
+			onPress={() =>
+				navigation.navigate("Category", {
+					categoryId: _id,
+				})
+			}
+		/>
+	);
 }
 
 export default function Categories({ data }) {

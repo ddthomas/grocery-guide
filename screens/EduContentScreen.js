@@ -1,6 +1,6 @@
 import React from "react";
 import { StyleSheet, Text, View, Button } from "react-native";
-import Video from  '../components/Video';
+import Video from "../components/Video";
 import Descriptions from "../components/Descriptions";
 import API from "../libs/api";
 
@@ -13,8 +13,10 @@ function EduContentScreen({ navigation, route }) {
 	console.log(eduContent);
 	return (
 		<View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-            <Video />
-			<Text>{eduContent.text}</Text>
+
+        <Video />
+			  <Text>{eduContent.text}</Text>
+
 		</View>
 	);
 }
