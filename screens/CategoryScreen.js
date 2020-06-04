@@ -8,11 +8,13 @@ class DetailScreen extends React.Component {
     }
 
     render() {
+        // console.log(this.props);
+        let { categoryId } = this.props.route.params;
         return (
             <View>
                 <Search />
                 <View>
-                    <Text></Text>
+                    <Text>Category ID: {categoryId}</Text>
                     <Text>Questions / Items in this Grocercy Aisle</Text>
                     <Button title="My Question" onPress={() => this.props.navigation.navigate("Edu")} />
                 </View>
