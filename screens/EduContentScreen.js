@@ -6,17 +6,12 @@ import API from "../libs/api";
 
 const api = API({});
 
-function EduContentScreen({ navigation, route }) {
-	console.log(route);
-	const {eduID} = route.params;
-	const eduContent = api.getByID({ key: "eduContent", id: eduID });
-	console.log(eduContent);
+function EduContentScreen({ navigation }) {
+	const description = api.get({ key: "eduContent" });
 	return (
 		<View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-
-        <Video />
-			  <Text>{eduContent.text}</Text>
-
+			<Video />
+			<Descriptions data={description} />
 		</View>
 	);
 }
