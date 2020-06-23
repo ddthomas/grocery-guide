@@ -9,7 +9,7 @@ function Category({ _id, category }) {
 			title={category}
 			onPress={() =>
 				navigation.navigate("Category", {
-					categoryId: _id,
+					category: category,
 				})
 			}
 		/>
@@ -19,6 +19,6 @@ function Category({ _id, category }) {
 export default function Categories({ data }) {
 	const categories = data;
 	return categories.map((category) => {
-		return <Category key={category._id} {...category} />;
+		return <Category key={category} {...category} />;
 	});
 }
