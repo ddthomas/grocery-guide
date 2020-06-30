@@ -1,7 +1,7 @@
 [
     {
         "_id": 1,
-        "class": "grocery",
+        "class": "Grocery",
         "question": "Which oatmeal is the healthiest?",
         "category": "Breakfast",
         "subcategory": "cereal",
@@ -10,7 +10,7 @@
     },
     {
         "_id": 2,
-        "class": "grocery",
+        "class": "Grocery",
         "question": "Should I drink skim milk?",
         "category": "Dairy",
         "subcategory": "milk",
@@ -19,11 +19,20 @@
     },
     {
         "_id": 3,
-        "class": "grocery",
+        "class": "Grocery",
         "question": "Are eggs bad for my cholesterol?",
         "category": "Eggs",
         "subcategory": "",
-        "tags": ["eggs", "cholesterol"],
+        "tags": ["eggs", "cholesterol", "breakfast"],
         "text": "Individuals with diabetes may be higher risk for raising cholesterol by consuming items like eggs. Eggs do contain cholesterol but for most people they won't raise the level of cholesterol circulating in the bloodstream. Cholesterol is needed in the body and is the precursor of the five major classes of steroid hormones: progestagens, glucocorticoids, mineralocorticoids, androgens, and estrogens. These hormones are powerful signal molecules that regulate a host of organismal functions."
+    },
+    {
+        "_id": 4,
+        "class": "Grocery",
+        "question": "What is a healthy breakfast?",
+        "category": "Breakfast",
+        "subcategory": "",
+        "tags": ["eggs", "oatmeal"],
+        "text": "Text for item #4"
     }
 ]

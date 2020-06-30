@@ -11,7 +11,7 @@ const api = API({});
 function HomeScreen({ navigation }) {
 	const questions = api.get({ key: "eduContent" });
 	const categories = api.get({ key: "eduContent" });
-
+	console.log(questions);
 	return (
 		<View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
 			<Text>Grocery Aisles (Categories):</Text>
