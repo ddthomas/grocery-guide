@@ -11,35 +11,27 @@ function CategoryScreen({ navigation, route }) {
 	const { categoryID } = route.params;
 	const eduContent = api.getByCategoryID({ key: "eduContent", id: categoryID });
 	console.log(eduContent);
-	
+
+	function renderEduContent(eduContent) {
+		return eduContent.map((item) => {
+			const category = api.getByID({
+				key: "categories",
+				id: item.categoryID,
+			});
+			return (
+				<View key={item._id}>
+					<Text>{item.question}</Text>
+					<Text>
+						{item.class} > {category.categoryName}
+					</Text>
+				</View>
+			);
+		});
+	}
+
 	return (
-		<View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-			<Text>{eduContent.question}</Text>
-			
-			<Text>
-				{eduContent.class} > {eduContent.category}
-			</Text>
-		</View>
+		<View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>{renderEduContent(eduContent)}</View>
 	);
 }
-
-//     render() {
-
-//         console.log(this.props);
-//         let { category } = this.props.route.params;
-//         const questions = api.getByCategory({ key: "eduContent", categoryName: category });
-
-//         return (
-//             <View>
-//                 <Search />
-//                 <View>
-//                     <Text>Category: {category}</Text>
-//                     <Text>Questions / Items in this Grocercy Aisle</Text>
-//                     <Questions data={questions} />
-//                 </View>
-//             </View>
-//         );
-//     }
-// }
 
 export default CategoryScreen;
