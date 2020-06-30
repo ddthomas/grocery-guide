@@ -1,8 +1,9 @@
 import eduContent from "../data/eduContent.json";
-
+import categories from "../data/categories.json";
 
 const DATA = {
-	eduContent: eduContent
+	eduContent: eduContent,
+	categories: categories
 };
 
 module.exports = (options) => {
@@ -13,8 +14,8 @@ module.exports = (options) => {
 		getByID({ key, id }) {
 			return DATA[key].find(item => {return item._id === id})
 		},
-		getByCategory({ key }) {
-			return DATA[key].find(item => {return item.category === category})
+		getByCategoryID({ key, id }) {
+			return DATA[key].filter(item => {return item.categoryID === id})
 		}
 	};
 };

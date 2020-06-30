@@ -8,15 +8,14 @@ const api = API({});
 
 function CategoryScreen({ navigation, route }) {
 	console.log(route);
-	const { eduID } = route.params;
-	const eduContent = api.getByID({ key: "eduContent", id: eduID });
+	const { categoryID } = route.params;
+	const eduContent = api.getByCategoryID({ key: "eduContent", id: categoryID });
 	console.log(eduContent);
-	const questions = [api.getByID({ key: "eduContent", id: eduID })];
-	console.log(questions);
+	
 	return (
 		<View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
 			<Text>{eduContent.question}</Text>
-			<Questions data={questions} />
+			
 			<Text>
 				{eduContent.class} > {eduContent.category}
 			</Text>
