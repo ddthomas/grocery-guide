@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, Text, View, Button } from "react-native";
+import { Text, View, Button } from "react-native";
 import Search from "../components/Search";
 
 class DetailScreen extends React.Component {
@@ -22,5 +22,5 @@ class DetailScreen extends React.Component {
         );
     }
 }
-
+*
 export default DetailScreen;
