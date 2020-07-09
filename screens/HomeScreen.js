@@ -13,16 +13,27 @@ function HomeScreen({ navigation }) {
 	const categories = api.get({ key: "categories" });
 	console.log(questions);
 	return (
-		<View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-			<Text>Grocery Aisles (Categories):</Text>
+		<View style={styles.homeScreen}>
+			<Text style = {styles.title}>Grocery Aisles (Categories):</Text>
 			
 			<Categories data={categories} />
 
-			<Text>Top Questions:</Text>
+			<Text style = {styles.title}>Top Questions:</Text>
 
 			<Questions data={questions} />
 		</View>
 	);
 }
+
+const styles = StyleSheet.create({
+	homeScreen: {
+		flex: 1,
+		alignItems: "center",
+		justifyContent: "center"
+	},
+	title: {
+		fontSize: 24
+	}
+});
 
 export default HomeScreen;

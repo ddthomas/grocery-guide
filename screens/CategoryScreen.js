@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, View, Button } from "react-native";
+import { Text, View, StyleSheet } from "react-native";
 import Search from "../components/Search";
 import Questions from "../components/Questions";
 import API from "../libs/api";
@@ -13,21 +13,37 @@ function CategoryScreen({ navigation, route }) {
 	console.log(eduContent);
 	const category = api.getByID({ key: "categories", id: categoryID });
 
-	function renderEduContent(eduContent) {
-		return (
-			<View>
-				<Text>{category.categoryName}</Text>
-				<Questions data={eduContent} />
-			</View>
-			
-		);
-	}
 	return (
-		<View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>{renderEduContent(eduContent)}</View>
+		<View style = {styles.categoryScreen}>
+			<Text style = {styles.title}>{category.categoryName}</Text>
+			<Questions data = {eduContent} />
+		</View>
 	);
-	}
+}
+	// function renderEduContent(eduContent) {
+	// 	return (
+	// 		<View>
+	// 			<Text style={styles.title}>{category.categoryName}</Text>
+	// 			<Questions data={eduContent} />
+	// 		</View>
+			
+	// 	);
+	// }
+	// return (
+	// 	<View style={styles.categoryScreen}>{renderEduContent(eduContent)}</View>
+	// );
+	// }
 
-
+	const styles = StyleSheet.create({
+		categoryScreen: {
+			flex: 1,
+			alignItems: "center",
+			justifyContent: "center"
+		},
+		title: {
+			fontSize: 24,
+		}
+	});
 
 // 	function renderEduContent(eduContent) {
 // 		return eduContent.map((item) => {
