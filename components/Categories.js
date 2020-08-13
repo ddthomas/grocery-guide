@@ -1,10 +1,11 @@
 import React from "react";
-import { Button } from "react-native";
+// import { Button } from "react-native";
 import { useNavigation } from "@react-navigation/native";
+import {Button, ThemeProvider} from "react-native-elements";
 
 function Category({ _id, categoryName }) {
 	const navigation = useNavigation();
-	return <Button title={categoryName} onPress={() => navigation.navigate("Category",{categoryID: _id})} />;
+	return <ThemeProvider><Button title={categoryName} onPress={() => navigation.navigate("Category",{categoryID: _id})} /></ThemeProvider>;
 }
 
 export default function Categories({ data }) {
