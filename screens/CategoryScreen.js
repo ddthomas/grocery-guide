@@ -2,16 +2,21 @@ import React from "react";
 import { Text, View, StyleSheet } from "react-native";
 import Search from "../components/Search";
 import Questions from "../components/Questions";
-import API from "../libs/api";
+//import API from "../libs/api";
 
-const api = API({});
+//const api = API({});
 
 function CategoryScreen({ navigation, route }) {
 	console.log(route);
 	const { categoryID } = route.params;
-	const eduContent = api.getByCategoryID({ key: "eduContent", id: categoryID });
+	//const eduContent = api.getByCategoryID({ key: "eduContent", id: categoryID });
+
+	//**********
+
 	console.log(eduContent);
-	const category = api.getByID({ key: "categories", id: categoryID });
+	//const category = api.getByID({ key: "categories", id: categoryID });
+
+	//**********
 
 	return (
 		<View style = {styles.categoryScreen}>

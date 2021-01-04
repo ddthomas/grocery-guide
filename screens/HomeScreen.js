@@ -3,14 +3,16 @@ import { StyleSheet, Text, View } from "react-native";
 
 import Questions from "../components/Questions";
 import Categories from "../components/Categories";
-import API from "../libs/api";
+//import API from "../libs/api";
 
 
-const api = API({});
+//const api = API({});
 
 function HomeScreen({ navigation }) {
-	const questions = api.get({ key: "eduContent" });
-	const categories = api.get({ key: "categories" });
+	//const questions = api.get({ key: "eduContent" });
+	const questions = fetch("https://agile-everglades-73888.herokuapp.com/educontent");
+	//const categories = api.get({ key: "categories" });
+	const categories = fetch("https://agile-everglades-73888.herokuapp.com/categories");
 	console.log(questions);
 	return (
 		<View style={styles.homeScreen}>
